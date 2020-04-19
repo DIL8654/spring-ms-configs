@@ -9,10 +9,6 @@ spring:
     url: jdbc:mysql://localhost:3306/springtestdb?createDatabaseIfNotExist=true
     username: springtest
     password: 12345
-
-    timeBetweenEvictionRunsMillis: 1000
-    testWhileIdle: true
-    validationQuery: SELECT 1
   jpa:
     hibernate:
       naming:
