@@ -5,10 +5,10 @@ management:
         include: "*"
 spring:
   datasource:
-    driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/springtestdb?createDatabaseIfNotExist=true
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springtestdb?createDatabaseIfNotExist=true
     username: springtest
-    password: 1234
+    password: 12345
 
     timeBetweenEvictionRunsMillis: 1000
     testWhileIdle: true
@@ -17,12 +17,3 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    ddl-auto: 'update'
-
-    #update will keep all data
-    #create will flush the data when starting up
-    #create-drop will create and drop when app exiting
-
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MariaDBDialect
